@@ -47,7 +47,7 @@ async function onMessage(msg) {
     }
     if (room) { // 如果是群消息
         const topic = await room.topic()
-        console.log(`群名: ${topic} 发消息人: ${contact.name()} 内容: ${content}`)
+            // console.log(`群名: ${topic} 发消息人: ${contact.name()} 内容: ${content}`)
     } else { // 如果非群消息
         console.log(`发消息人: ${contact.name()} 消息内容: ${content}`)
         if (config.AUTOREPLY && contact.name() == config.AUTOREPLYPERSON) { // 如果开启自动聊天且已经指定了智能聊天的对象才开启机器人聊天
